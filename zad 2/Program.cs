@@ -50,7 +50,7 @@
                     int depth = 0;
                     if (queue.Peek().node == end)
                     {
-                        Console.WriteLine("Най-краткият път е: " + queue.Peek().depth);
+                        Console.WriteLine("Най-краткият път е: " + queue.Peek().depth + " стъпки");
                         break;
                     }
                     (var node, depth) = queue.Dequeue();
@@ -59,7 +59,7 @@
                         if (!visited.Contains(neighbor))
                         {
                             visited.Add(neighbor);
-                            queue.Enqueue((neighbor, depth++));
+                            queue.Enqueue((neighbor, depth + 1));
                         }
                     }
                 }
