@@ -22,7 +22,7 @@
                 {
                     if (item.Value.Count > 1)
                     {
-                        Console.Write(edge + ", ");
+                        Console.Write(edge + " ");
                     }
                     else
                     {
@@ -31,11 +31,13 @@
                 }
                 Console.WriteLine();
             }
+
             Console.WriteLine("Starting point:");
             int start = int.Parse(Console.ReadLine());
             Console.WriteLine("End point:");
             int end = int.Parse(Console.ReadLine());
             BFS(graph, start, end);
+
             static void BFS(Dictionary<int, List<int>> graph, int start,int end)
             {
                 var visited = new HashSet<int>();
@@ -63,6 +65,5 @@
                 }
             }
         }
-
     }
 }
